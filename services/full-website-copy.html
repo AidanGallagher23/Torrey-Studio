@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Full Website Copy — Torrey Studio</title>
+<meta name="description" content="Copy for up to 5 pages of your website — Home, About, Services, Process, Contact — with one consistent voice throughout. From ~$450." />
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0a0a0c;--bg-soft:#101015;--ink:#f4f1ea;--muted:#9a978f;--line:rgba(244,241,234,.10);--gold:#d8b46a;--gold-soft:#e7cf9a;--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:#0a0a0c}a{color:inherit;text-decoration:none}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none;opacity:.5}
+.orb.a{width:520px;height:520px;background:radial-gradient(circle,#3a2f17,transparent 70%);top:-160px;left:-120px}
+.orb.b{width:600px;height:600px;background:radial-gradient(circle,#1c2436,transparent 70%);bottom:-200px;right:-160px}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:difference}
+.cursor-dot{width:6px;height:6px;background:var(--ink)}
+.cursor-ring{width:34px;height:34px;border:1px solid rgba(244,241,234,.5);transition:width .25s,height .25s,background .25s,border-color .25s}
+.cursor-ring.grow{width:58px;height:58px;background:rgba(216,180,106,.12);border-color:var(--gold)}
+@media(hover:none){.cursor-dot,.cursor-ring{display:none}}
+.brand{font-family:var(--serif);font-size:21px;font-weight:500;letter-spacing:.2px;display:flex;align-items:center;gap:10px}
+.brand .mark{width:11px;height:11px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(216,180,106,.18);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(216,180,106,.18)}50%{box-shadow:0 0 0 8px rgba(216,180,106,.05)}}
+.page{position:relative;z-index:2}
+.section{padding:clamp(60px,10vw,120px) clamp(20px,5vw,64px);max-width:1280px;margin:0 auto}
+.hero-svc{min-height:50vh;display:flex;flex-direction:column;justify-content:flex-end;padding:140px clamp(20px,5vw,64px) 56px;max-width:1280px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+.eyebrow .bar{width:34px;height:1px;background:var(--gold)}
+.hero-svc h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:1.0;letter-spacing:-.02em;max-width:18ch}
+.hero-svc h1 .it{font-style:italic;color:var(--gold-soft)}
+.hero-svc .sub{margin-top:24px;max-width:50ch;color:var(--muted);font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.65}
+.price-badge{display:inline-flex;gap:32px;flex-wrap:wrap;margin-top:36px;padding:22px 28px;border:1px solid rgba(216,180,106,.22);border-radius:16px;background:rgba(216,180,106,.06)}
+.price-item .plabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.price-item .pval{font-family:var(--serif);font-size:1.7rem;color:var(--gold-soft)}
+.sec-tag{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.sec-tag .bar{width:28px;height:1px;background:var(--gold)}
+.sec-head{margin-bottom:44px}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4.5vw,3.2rem);line-height:1.05;letter-spacing:-.015em}
+.sec-head h2 .it{font-style:italic;color:var(--gold-soft)}
+.sec-head p{margin-top:16px;color:var(--muted);font-size:1.05rem;max-width:54ch;line-height:1.65}
+.sample-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;max-width:720px}
+.sample-label{padding:14px 24px;background:rgba(216,180,106,.06);border-bottom:1px solid rgba(216,180,106,.15);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px}
+.sample-label .dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.sample-body{padding:32px 28px}
+.sample-context{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;margin-top:24px}
+.sample-context:first-child{margin-top:0}
+.sample-body h3{font-family:var(--serif);font-weight:400;font-size:1.55rem;line-height:1.15;margin-bottom:10px}
+.sample-body p{font-family:var(--serif);font-size:1.15rem;line-height:1.6;color:var(--ink);margin-bottom:12px}
+.sample-body p:last-child{margin-bottom:0}
+.page-list{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:560px}
+.pg-item{background:var(--bg);padding:22px 26px;display:flex;align-items:center;gap:16px;transition:background .3s}
+.pg-item:hover{background:var(--bg-soft)}
+.pg-num{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:.1em;min-width:30px}
+.pg-item h4{font-family:var(--serif);font-weight:400;font-size:1.1rem;margin-bottom:3px}
+.pg-item p{color:var(--muted);font-size:.88rem}
+.includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:760px}
+.inc-item{background:var(--bg);padding:26px 24px;transition:background .3s}
+.inc-item:hover{background:var(--bg-soft)}
+.inc-icon{font-size:18px;margin-bottom:12px}
+.inc-item h4{font-family:var(--serif);font-weight:400;font-size:1.1rem;margin-bottom:6px}
+.inc-item p{color:var(--muted);font-size:.9rem;line-height:1.5}
+.who-card{border:1px solid var(--line);border-radius:20px;padding:clamp(32px,5vw,50px);max-width:720px;background:linear-gradient(160deg,rgba(255,255,255,.022),transparent)}
+.who-card p{color:var(--muted);font-size:1.02rem;line-height:1.7;margin-bottom:16px}
+.who-card p:last-child{margin-bottom:0}
+.cta-block{text-align:center;border:1px solid var(--line);border-radius:28px;padding:clamp(50px,8vw,90px) clamp(24px,5vw,60px);background:radial-gradient(600px circle at 50% 0%,rgba(216,180,106,.08),transparent 60%)}
+.cta-block h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5.5vw,4rem);line-height:1.02;letter-spacing:-.02em}
+.cta-block h2 .it{font-style:italic;color:var(--gold-soft)}
+.cta-block p{color:var(--muted);max-width:44ch;margin:18px auto 32px;font-size:1.02rem}
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:100px;font-size:15px;font-weight:500;overflow:hidden;transition:transform .3s;cursor:pointer;border:none;font-family:var(--sans);text-decoration:none}
+.btn-primary{background:var(--gold);color:#0a0a0c}
+.btn-primary span{position:relative;z-index:2}
+.btn-primary::before{content:"";position:absolute;inset:0;background:var(--gold-soft);transform:translateY(101%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.btn-primary:hover::before{transform:translateY(0)}
+.btn .arrow{transition:transform .3s;position:relative;z-index:2}
+.btn:hover .arrow{transform:translateX(4px)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:50px clamp(20px,5vw,64px);max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;color:var(--muted);font-size:14px}
+footer .brand{color:var(--ink)}
+.socials{display:flex;gap:22px;align-items:center}
+.socials a{display:flex;align-items:center;gap:7px;transition:color .3s}
+.socials a:hover{color:var(--gold)}
+.socials a svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="orb a"></div>
+<div class="orb b"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div id="nav-root"></div>
+<script src="/nav.js"></script>
+<div class="page">
+
+  <header class="hero-svc">
+    <div class="eyebrow reveal"><span class="bar"></span>Copywriting</div>
+    <h1 class="reveal d1">Full website copy, <span class="it">one voice.</span></h1>
+    <p class="sub reveal d2">Up to 5 pages written from scratch — Home, About, Services, Process, Contact — with the same voice, the same message hierarchy, and no seams between them.</p>
+    <div class="price-badge reveal d3">
+      <div class="price-item"><div class="plabel">Starting at</div><div class="pval">~$450</div></div>
+      <div class="price-item"><div class="plabel">Delivered in</div><div class="pval">1–2 weeks</div></div>
+    </div>
+  </header>
+
+  <div class="section">
+    <div class="sec-head reveal">
+      <div class="sec-tag"><span class="bar"></span>What's covered</div>
+      <h2>Up to five pages, <span class="it">fully written.</span></h2>
+      <p>You choose which pages. The most common combination for a new business site:</p>
+    </div>
+    <div class="page-list reveal">
+      <div class="pg-item"><div class="pg-num">01</div><div><h4>Home</h4><p>Hero, value prop, services overview, proof, CTA</p></div></div>
+      <div class="pg-item"><div class="pg-num">02</div><div><h4>About</h4><p>Origin story, values, who you work with</p></div></div>
+      <div class="pg-item"><div class="pg-num">03</div><div><h4>Services</h4><p>What you offer, who it's for, what they get</p></div></div>
+      <div class="pg-item"><div class="pg-num">04</div><div><h4>Process</h4><p>How you work, what clients can expect</p></div></div>
+      <div class="pg-item"><div class="pg-num">05</div><div><h4>Contact</h4><p>Copy framing the inquiry — not just a form</p></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head reveal">
+      <div class="sec-tag"><span class="bar"></span>Spec sample</div>
+      <h2>See the <span class="it">craft first.</span></h2>
+      <p>Two excerpts from a fictional brand's site to show how the voice stays consistent across pages.</p>
+    </div>
+    <div class="sample-card reveal">
+      <div class="sample-label"><span class="dot"></span>Spec sample · full site · brand strategy consultancy</div>
+      <div class="sample-body">
+        <div class="sample-context">Homepage hero headline</div>
+        <h3>Strategy is just a word until someone makes it work in a room.</h3>
+        <div class="sample-context">About page — opening paragraph</div>
+        <p>We started Meridian because most strategy consultancies tell you what to do and leave before things get hard. We stay. We've been in the room when the plan hits the wall and something smarter has to happen fast. That's the work we're here for.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head reveal">
+      <div class="sec-tag"><span class="bar"></span>What's included</div>
+      <h2>More than just <span class="it">the words.</span></h2>
+    </div>
+    <div class="includes-grid">
+      <div class="inc-item reveal d1">
+        <div class="inc-icon">✦</div>
+        <h4>Voice brief</h4>
+        <p>Before writing starts, I'll define the tone, language rules, and things to avoid — so every page sounds like the same person.</p>
+      </div>
+      <div class="inc-item reveal d2">
+        <div class="inc-icon">✦</div>
+        <h4>Free sample first</h4>
+        <p>A homepage hero section written before any payment — so you can approve the voice before the full project starts.</p>
+      </div>
+      <div class="inc-item reveal d3">
+        <div class="inc-icon">✦</div>
+        <h4>All pages, one doc</h4>
+        <p>Delivered as a single structured Google Doc — easy to review, easy to hand to a developer.</p>
+      </div>
+      <div class="inc-item reveal">
+        <div class="inc-icon">✦</div>
+        <h4>One revision round</h4>
+        <p>One pass of feedback incorporated across all pages. Most sites land in one round.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head reveal">
+      <div class="sec-tag"><span class="bar"></span>Who it's for</div>
+      <h2>Launching or <span class="it">starting over.</span></h2>
+    </div>
+    <div class="who-card reveal">
+      <p>This is for new businesses building their first real web presence, and for established businesses whose site was written "by whoever had time" and now sounds like it. Either way, the problem is the same: the copy is inconsistent, reads like a job description, or just doesn't sound like the people behind the brand.</p>
+      <p>If you've been embarrassed to send someone to your website, this is the project.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="cta-block reveal">
+      <h2>Ready to build a site you're <span class="it">proud to share?</span></h2>
+      <p>Tell me about your business and which pages you need. I'll send back a free homepage hero sample and a clear quote.</p>
+      <a class="btn btn-primary" href="/start.html?service=full-website-copy"><span>Start this project</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+
+</div>
+<footer>
+  <a class="brand" href="/index.html"><span class="mark"></span>Torrey Studio</a>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/aidan-gallagher-390556242/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A6 6 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+    <a href="https://www.instagram.com/torrey_studio/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</a>
+    <a href="mailto:TorreyStudio101@gmail.com">Email</a>
+  </div>
+  <div>© 2026 Torrey Studio. Words, well chosen.</div>
+</footer>
+<script>
+const dot=document.querySelector('.cursor-dot'),ring=document.querySelector('.cursor-ring');
+let rx=0,ry=0,mx=0,my=0;
+addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
+(function loop(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,.btn,.inc-item,.pg-item').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('grow'));el.addEventListener('mouseleave',()=>ring.classList.remove('grow'))});
+addEventListener('mousemove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;document.querySelector('.orb.a').style.transform=`translate(${x*30}px,${y*30}px)`;document.querySelector('.orb.b').style.transform=`translate(${x*-40}px,${y*-40}px)`});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.btn-primary').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.3}px)`});btn.addEventListener('mouseleave',()=>btn.style.transform='')});
+</script>
+</body>
+</html>
