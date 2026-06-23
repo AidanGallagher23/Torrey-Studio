@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Torrey Studio — Words that move people</title>
 <meta name="description" content="Torrey Studio is a copywriting studio crafting brand voice, web copy, email, and ads that convert." />
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -170,9 +171,10 @@ section{position:relative;z-index:2;padding:clamp(80px,12vw,150px) clamp(20px,5v
 /* footer */
 footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:50px clamp(20px,5vw,64px);max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;color:var(--muted);font-size:14px}
 footer .brand{color:var(--ink)}
-footer .socials{display:flex;gap:24px}
-footer .socials a{transition:color .3s}
+footer .socials{display:flex;gap:22px;align-items:center}
+footer .socials a{display:flex;align-items:center;gap:7px;transition:color .3s}
 footer .socials a:hover{color:var(--gold)}
+footer .socials a svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 </style>
 </head>
 <body>
@@ -187,7 +189,7 @@ footer .socials a:hover{color:var(--gold)}
   <div class="nav-links">
     <a href="#work">Work</a>
     <a href="#services">Services</a>
-    <a class="nav-cta" href="#contact">Start a project</a>
+    <a class="nav-cta" href="start.html">Start a project</a>
   </div>
 </nav>
 
@@ -201,7 +203,7 @@ footer .socials a:hover{color:var(--gold)}
   <p class="hero-sub">Torrey Studio crafts brand voice, web copy, email, and ad campaigns for founders who refuse to sound like everyone else.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="#work"><span>See the work</span><span class="arrow">→</span></a>
-    <a class="btn btn-ghost" href="#contact">Book a free audit</a>
+    <a class="btn btn-ghost" href="start.html">Book a free audit</a>
   </div>
   <div class="scroll-cue"><span>Scroll</span><span class="track"></span></div>
 </header>
@@ -332,16 +334,22 @@ footer .socials a:hover{color:var(--gold)}
   <div class="cta reveal">
     <h2>Let's make your brand <span class="it">unignorable.</span></h2>
     <p>Tell us what you're building. We'll send back a free copy audit of one page or email — no pitch, just sharp notes.</p>
-    <a class="btn btn-primary" href="mailto:torreystudio101@gmail.com"><span>Start a project</span><span class="arrow">→</span></a>
+    <a class="btn btn-primary" href="start.html"><span>Start a project</span><span class="arrow">→</span></a>
   </div>
 </section>
 
 <footer>
   <a class="brand" href="#top"><span class="mark"></span>Torrey Studio</a>
   <div class="socials">
-    <a href="#">Instagram</a>
-    <a href="#">LinkedIn</a>
-    <a href="mailto:torreystudio101@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/aidan-gallagher-390556242/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A6 6 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://www.instagram.com/torrey_studio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      Instagram
+    </a>
+    <a href="mailto:torreystudio101@gmail.com" aria-label="Email">Email</a>
   </div>
   <div>© 2026 Torrey Studio. Words, well chosen.</div>
 </footer>
