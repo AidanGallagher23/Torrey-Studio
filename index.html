@@ -148,24 +148,18 @@ section{position:relative;z-index:2;padding:clamp(80px,12vw,150px) clamp(20px,5v
 .work .toggle{margin-top:18px;font-size:13px;color:var(--gold);display:inline-flex;align-items:center;gap:8px}
 .work .toggle .ic{transition:transform .3s}
 .work.open .toggle .ic{transform:rotate(45deg)}
-.result-row{display:flex;gap:30px;margin-top:24px;flex-wrap:wrap}
-.result-row .r .n{font-family:var(--serif);font-size:1.7rem;color:var(--gold-soft)}
-.result-row .r .l{font-size:12px;color:var(--muted);letter-spacing:.06em}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:60px 0}
-@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr);gap:44px 20px}}
-.stat .num{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,6vw,4rem);line-height:1;letter-spacing:-.02em}
-.stat .num .suf{color:var(--gold)}
-.stat .lbl{color:var(--muted);font-size:.95rem;margin-top:12px}
-
-/* testimonial */
-.quote{text-align:center;max-width:900px;margin:0 auto}
-.quote .stars{color:var(--gold);letter-spacing:6px;margin-bottom:30px}
-.quote blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,4vw,2.7rem);line-height:1.25;letter-spacing:-.01em}
-.quote blockquote .it{font-style:italic;color:var(--gold-soft)}
-.quote .cite{margin-top:34px;color:var(--muted);font-size:.98rem}
-.quote .cite b{color:var(--ink);font-weight:500}
+/* process */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+@media(max-width:900px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.process-grid{grid-template-columns:1fr}}
+.process-step{background:var(--bg);padding:38px 32px;position:relative;transition:background .4s}
+.process-step::before{content:"";position:absolute;left:0;top:0;height:100%;width:2px;background:var(--gold);transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.process-step:hover{background:var(--bg-soft)}
+.process-step:hover::before{transform:scaleY(1)}
+.step-num{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:.1em;margin-bottom:18px}
+.process-step h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;margin-bottom:12px}
+.process-step p{color:var(--muted);font-size:.97rem}
 
 /* CTA */
 .cta{text-align:center;border:1px solid var(--line);border-radius:28px;padding:clamp(50px,8vw,90px) clamp(24px,5vw,60px);background:radial-gradient(600px circle at 50% 0%,rgba(216,180,106,.08),transparent 60%)}
@@ -193,7 +187,6 @@ footer .socials a:hover{color:var(--gold)}
   <div class="nav-links">
     <a href="#work">Work</a>
     <a href="#services">Services</a>
-    <a href="#results">Results</a>
     <a class="nav-cta" href="#contact">Start a project</a>
   </div>
 </nav>
@@ -236,9 +229,9 @@ footer .socials a:hover{color:var(--gold)}
 
 <section id="work">
   <div class="sec-head reveal">
-    <div class="sec-tag"><span class="bar"></span>Selected work</div>
-    <h2>Copy that <span class="it">earned its keep.</span></h2>
-    <p>A taste across formats. Click any piece to read the actual copy and the result it drove.</p>
+    <div class="sec-tag"><span class="bar"></span>Sample work</div>
+    <h2>Copy written <span class="it">to show the craft.</span></h2>
+    <p>Spec and concept pieces across formats. Click any card to read the full copy sample.</p>
   </div>
   <div class="work-grid">
 
@@ -253,10 +246,6 @@ footer .socials a:hover{color:var(--gold)}
       <div class="sample body">
         <div class="label">Subhead</div>
         <p>Northwind pulls every task, doc, and deadline into one calm view — so the only thing your team argues about is which feature ships first.</p>
-      </div>
-      <div class="result-row">
-        <div class="r"><div class="n">+41%</div><div class="l">trial sign-ups</div></div>
-        <div class="r"><div class="n">-23%</div><div class="l">bounce rate</div></div>
       </div>
       <span class="toggle">Read the full copy <span class="ic">+</span></span>
     </article>
@@ -273,10 +262,6 @@ footer .socials a:hover{color:var(--gold)}
         <div class="label">Opening lines</div>
         <p>First, let it breathe for an hour. Trust us — that's when the cedar wakes up. While you wait, here's the story behind the smell you just fell for…</p>
       </div>
-      <div class="result-row">
-        <div class="r"><div class="n">62%</div><div class="l">open rate</div></div>
-        <div class="r"><div class="n">3.4x</div><div class="l">flow revenue</div></div>
-      </div>
       <span class="toggle">Read the full copy <span class="ic">+</span></span>
     </article>
 
@@ -291,10 +276,6 @@ footer .socials a:hover{color:var(--gold)}
       <div class="sample body">
         <div class="label">Body + CTA</div>
         <p>Tally moves what you won't miss into savings, automatically. No budgeting apps, no guilt, no spreadsheets. Just a balance that quietly grows. → Start saving in 60 seconds.</p>
-      </div>
-      <div class="result-row">
-        <div class="r"><div class="n">-38%</div><div class="l">cost per install</div></div>
-        <div class="r"><div class="n">2.1%</div><div class="l">CTR</div></div>
       </div>
       <span class="toggle">Read the full copy <span class="ic">+</span></span>
     </article>
@@ -311,30 +292,39 @@ footer .socials a:hover{color:var(--gold)}
         <div class="label">Voice sample · room page</div>
         <p>No mini-bar lectures, no laminated rules. Just a big bed, slow mornings, and a coffee maker that actually makes good coffee. Stay as long as the city will let you.</p>
       </div>
-      <div class="result-row">
-        <div class="r"><div class="n">+27%</div><div class="l">direct bookings</div></div>
-        <div class="r"><div class="n">4.9★</div><div class="l">guest rating</div></div>
-      </div>
       <span class="toggle">Read the full copy <span class="ic">+</span></span>
     </article>
 
   </div>
 </section>
 
-<section id="results">
-  <div class="stats">
-    <div class="stat reveal d1"><div class="num"><span data-count="120">0</span><span class="suf">+</span></div><div class="lbl">Projects shipped</div></div>
-    <div class="stat reveal d2"><div class="num"><span data-count="38">0</span><span class="suf">%</span></div><div class="lbl">Avg. lift in conversions</div></div>
-    <div class="stat reveal d3"><div class="num">$<span data-count="9">0</span><span class="suf">M+</span></div><div class="lbl">Revenue influenced</div></div>
-    <div class="stat reveal d4"><div class="num"><span data-count="48">0</span><span class="suf">h</span></div><div class="lbl">Typical first draft</div></div>
+<section id="process">
+  <div class="sec-head reveal">
+    <div class="sec-tag"><span class="bar"></span>How we work</div>
+    <h2>From brief to <span class="it">finished copy.</span></h2>
+    <p>A focused process with no wasted steps. Most projects reach first draft in 48 hours.</p>
   </div>
-</section>
-
-<section class="quote-sec">
-  <div class="quote reveal">
-    <div class="stars">★★★★★</div>
-    <blockquote>"We handed Torrey a half-built product and a vague feeling. They handed back <span class="it">a voice</span> — and a homepage that finally sounds like us."</blockquote>
-    <div class="cite"><b>Maya Reyes</b> · Founder, Northwind</div>
+  <div class="process-grid">
+    <div class="process-step reveal d1">
+      <div class="step-num">01</div>
+      <h3>Brief</h3>
+      <p>You tell us what you're building, who it's for, and what's not working. We ask the questions most writers skip.</p>
+    </div>
+    <div class="process-step reveal d2">
+      <div class="step-num">02</div>
+      <h3>Strategy</h3>
+      <p>Before a word is written, we map the message hierarchy, tone, and the one thing every piece needs to do.</p>
+    </div>
+    <div class="process-step reveal d3">
+      <div class="step-num">03</div>
+      <h3>Copy</h3>
+      <p>First draft delivered in 48 hours. Built around your voice, your audience, and a clear point of view.</p>
+    </div>
+    <div class="process-step reveal d4">
+      <div class="step-num">04</div>
+      <h3>Refine</h3>
+      <p>One focused round of revisions. We sharpen until the copy does exactly what it needs to do.</p>
+    </div>
   </div>
 </section>
 
@@ -342,7 +332,7 @@ footer .socials a:hover{color:var(--gold)}
   <div class="cta reveal">
     <h2>Let's make your brand <span class="it">unignorable.</span></h2>
     <p>Tell us what you're building. We'll send back a free copy audit of one page or email — no pitch, just sharp notes.</p>
-    <a class="btn btn-primary" href="mailto:hello@torreystudio.com"><span>Start a project</span><span class="arrow">→</span></a>
+    <a class="btn btn-primary" href="mailto:torreystudio101@gmail.com"><span>Start a project</span><span class="arrow">→</span></a>
   </div>
 </section>
 
@@ -351,7 +341,7 @@ footer .socials a:hover{color:var(--gold)}
   <div class="socials">
     <a href="#">Instagram</a>
     <a href="#">LinkedIn</a>
-    <a href="mailto:hello@torreystudio.com">Email</a>
+    <a href="mailto:torreystudio101@gmail.com">Email</a>
   </div>
   <div>© 2026 Torrey Studio. Words, well chosen.</div>
 </footer>
@@ -366,7 +356,7 @@ const dot=document.querySelector('.cursor-dot'),ring=document.querySelector('.cu
 let rx=0,ry=0,mx=0,my=0;
 addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
 (function loop(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,.work,.btn,.svc,.toggle').forEach(el=>{
+document.querySelectorAll('a,.work,.btn,.svc,.toggle,.process-step').forEach(el=>{
   el.addEventListener('mouseenter',()=>ring.classList.add('grow'));
   el.addEventListener('mouseleave',()=>ring.classList.remove('grow'));
 });
@@ -374,19 +364,6 @@ document.querySelectorAll('a,.work,.btn,.svc,.toggle').forEach(el=>{
 // reveal on scroll
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-// count up
-function countUp(el){
-  const target=+el.dataset.count,dur=1600,start=performance.now();
-  function step(now){
-    const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);
-    el.textContent=Math.round(target*ease);
-    if(p<1)requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-const co=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){countUp(e.target);co.unobserve(e.target);}})},{threshold:.6});
-document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
 
 // portfolio expand + spotlight
 document.querySelectorAll('.work').forEach(card=>{
