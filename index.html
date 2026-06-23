@@ -52,22 +52,9 @@ img{max-width:100%;display:block}
 .cursor-ring.grow{width:58px;height:58px;background:rgba(216,180,106,.12);border-color:var(--gold)}
 @media (hover:none){.cursor-dot,.cursor-ring{display:none}}
 
-/* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,5vw,64px);transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
-nav.scrolled{background:rgba(10,10,12,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px clamp(20px,5vw,64px)}
 .brand{font-family:var(--serif);font-size:21px;font-weight:500;letter-spacing:.2px;display:flex;align-items:center;gap:10px}
 .brand .mark{width:11px;height:11px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(216,180,106,.18);animation:pulse 3s ease-in-out infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(216,180,106,.18)}50%{box-shadow:0 0 0 8px rgba(216,180,106,.05)}}
-.nav-links{display:flex;gap:34px;align-items:center}
-.nav-links a{font-size:14px;color:var(--muted);position:relative;transition:color .3s}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--gold);transition:width .35s cubic-bezier(.2,.8,.2,1)}
-.nav-links a:hover{color:var(--ink)}
-.nav-links a:hover::after{width:100%}
-.nav-cta{padding:9px 18px;border:1px solid var(--line);border-radius:100px;color:var(--ink)!important;transition:background .3s,border-color .3s,color .3s}
-.nav-cta:hover{background:var(--gold);border-color:var(--gold);color:#0a0a0c!important}
-.nav-cta::after{display:none}
-.burger{display:none}
-@media(max-width:760px){.nav-links{display:none}}
 
 /* hero */
 header.hero{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,64px);max-width:1280px;margin:0 auto}
@@ -184,14 +171,8 @@ footer .socials a svg{width:15px;height:15px;stroke:currentColor;fill:none;strok
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
 
-<nav id="nav">
-  <a class="brand" href="#top"><span class="mark"></span>Torrey&nbsp;Studio</a>
-  <div class="nav-links">
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a class="nav-cta" href="start.html">Start a project</a>
-  </div>
-</nav>
+<div id="nav-root"></div>
+<script src="/nav.js"></script>
 
 <header class="hero" id="top">
   <div class="eyebrow"><span class="bar"></span>Copywriting Studio · Est. 2026</div>
@@ -355,10 +336,6 @@ footer .socials a svg{width:15px;height:15px;stroke:currentColor;fill:none;strok
 </footer>
 
 <script>
-// nav scroll state
-const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
-
 // custom cursor
 const dot=document.querySelector('.cursor-dot'),ring=document.querySelector('.cursor-ring');
 let rx=0,ry=0,mx=0,my=0;
